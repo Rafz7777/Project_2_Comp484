@@ -4,7 +4,7 @@
 
 let pet_info = {
     name: "",
-    weight: 10,         // starting weight
+    weight: 14,         // starting weight
     happiness: 5,
     mood: "Neutral 😐"
 };
