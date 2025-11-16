@@ -1,18 +1,20 @@
 /* =========================
    GLOBAL STYLES
    ========================= */
-   @font-face {
-       font-family: "DogFont";
-       src: url("fonts/puppy.ttf") format("truetype");
-       font-weight: normal;
-       font-style: normal;
-       font-display: swap;
-   }
+@font-face {
+  font-family: "DogFont";
+  src: url("fonts/puppy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 #pet-title {
-    font-family: "DogFont", sans-serif;
-    font-size: 54px;
-    font-weight: 400; /* normal weight */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-family: "DogFont", sans-serif;
+  font-size: 54px;
+  font-weight: 400;
+  /* normal weight */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 * {
@@ -31,12 +33,14 @@ body::before {
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-  
-  /* Create a fade effect from left (opaque) to right (transparent) */
-  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
-  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* Safari support */
 
-  z-index: -1; /* behind all content */
+  /* Create a fade effect from left (opaque) to right (transparent) */
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  /* Safari support */
+
+  z-index: -1;
+  /* behind all content */
 }
 
 body {
@@ -45,8 +49,10 @@ body {
 }
 
 header {
-  position: relative;    /* allows shifting without removing from normal flow */
-  left: 225px;            /* move right */
+  position: relative;
+  /* allows shifting without removing from normal flow */
+  left: 225px;
+  /* move right */
 }
 
 h1 {
@@ -78,8 +84,8 @@ footer {
 }
 
 footer a {
-  float:left;
-  margin:5px;
+  float: left;
+  margin: 5px;
 }
 
 /* Overlay that covers everything */
@@ -89,11 +95,13 @@ footer a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.9); /* ghosted look */
+  background: rgba(255, 255, 255, 0.9);
+  /* ghosted look */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* above everything */
+  z-index: 1000;
+  /* above everything */
 }
 
 /* Center the input box */
@@ -102,7 +110,7 @@ footer a {
   padding: 20px 30px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 2px 2px 12px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
 }
 
 .name-overlay input {
@@ -125,10 +133,12 @@ footer a {
 }
 
 .pet-image-container {
-  position: relative;   /* needed for absolute positioning of the bubble */
+  position: relative;
+  /* needed for absolute positioning of the bubble */
   float: left;
   padding: 10px;
-  margin-top: 19px;     /* adjust this number to move image down */
+  margin-top: 19px;
+  /* adjust this number to move image down */
 }
 
 
@@ -153,30 +163,33 @@ footer a {
 }
 
 .button-container button {
-    width: 75px;                  
-    height: 75px;                 
-    background-image: url('images/paw.png'); 
-    background-size: 140px 140px;     
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    border: none;                 
-    border-radius: 50%;           
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 15px;
+  width: 75px;
+  height: 75px;
+  background-image: url('images/paw.png');
+  background-size: 140px 140px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 15px;
 
-    /* Text styling */
-    color: white;      
-    text-align: center;
-    padding-top: 35px;  /* move text lower inside the button */
-    font-size: 12px;    /* optional: make text smaller to fit */
+  /* Text styling */
+  color: white;
+  text-align: center;
+  padding-top: 35px;
+  /* move text lower inside the button */
+  font-size: 12px;
+  /* optional: make text smaller to fit */
 }
 
 
 .button-container button:hover {
-    transform: scale(1.1);        /* slight zoom on hover */
-    
+  transform: scale(1.1);
+  /* slight zoom on hover */
+
 }
 
 
@@ -195,14 +208,18 @@ footer a {
   color: #000;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   text-align: center;
   z-index: 10;
 
-  width: auto;           /* width adapts to text length */
-  max-width: 350px;      /* prevents bubble from being too wide */
-  white-space: nowrap;   /* keep text in one line if possible */
-  overflow-wrap: break-word; /* wrap text if it exceeds max-width */
+  width: auto;
+  /* width adapts to text length */
+  max-width: 350px;
+  /* prevents bubble from being too wide */
+  white-space: nowrap;
+  /* keep text in one line if possible */
+  overflow-wrap: break-word;
+  /* wrap text if it exceeds max-width */
 }
 
 
@@ -210,11 +227,14 @@ footer a {
 .pet-message::after {
   content: "";
   position: absolute;
-  top: 100%;           /* tail starts just below the bubble */
-  left: 67%;           
+  top: 100%;
+  /* tail starts just below the bubble */
+  left: 67%;
   transform: translateX(-50%);
-  border-width: 10px;  /* size of the tail */
+  border-width: 10px;
+  /* size of the tail */
   border-style: solid;
-  border-color: #fff transparent transparent transparent; /* white triangle pointing down */
+  border-color: #fff transparent transparent transparent;
+  /* white triangle pointing down */
   display: block;
 }

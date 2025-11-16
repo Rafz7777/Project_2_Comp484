@@ -17,20 +17,20 @@ const startingWeight = pet_info.weight;  // store initial weight
 
 // Show pet message in thought bubble
 function showPetMessage(text) {
-  $(".pet-message")
-    .stop(true)      // Stops any ongoing or queued animations on this element.
-                     // Ensures that if a previous message is still fading in/out, it is immediately stopped.
-                     // Prevents multiple messages from overlapping or queuing up.
-    .hide()          // **.hide()**: immediately hides the element (sets display:none).
-                     // Clears any previous message so the new message can appear cleanly.
-    .text(text)      // Updates the content of the element to the new message passed as 'text'.
-    .show();         // **.show()**: immediately shows the element (restores display property).
-                     // Makes the new message visible to the user.
+    $(".pet-message")
+        .stop(true)      // Stops any ongoing or queued animations on this element.
+        // Ensures that if a previous message is still fading in/out, it is immediately stopped.
+        // Prevents multiple messages from overlapping or queuing up.
+        .hide()          // **.hide()**: immediately hides the element (sets display:none).
+        // Clears any previous message so the new message can appear cleanly.
+        .text(text)      // Updates the content of the element to the new message passed as 'text'.
+        .show();         // **.show()**: immediately shows the element (restores display property).
+    // Makes the new message visible to the user.
 
-  // Automatically hide the message after 5 seconds
-  setTimeout(function() {
-    $(".pet-message").hide(); // Hides the message again after 5000 milliseconds (5 seconds)
-  }, 5000);
+    // Automatically hide the message after 5 seconds
+    setTimeout(function () {
+        $(".pet-message").hide(); // Hides the message again after 5000 milliseconds (5 seconds)
+    }, 5000);
 }
 
 

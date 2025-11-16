@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Your Giga Pet</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Link to your CSS -->
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Your JS file -->
-    <script src="script.js" defer></script>
-    
-    <!-- jQuery library -->
-    <script src="https://code.jquery.com/jquery-2.2.1.min.js"
-            integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="
-            crossorigin="anonymous"></script>
-  </head>
-  <body>
 
-    <!-- ======================
+<head>
+  <title>Your Giga Pet</title>
+  <meta name="description" content="A cool thing made with Glitch">
+  <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Link to your CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Your JS file -->
+  <script src="script.js" defer></script>
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"
+    integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- ======================
          NAME OVERLAY
          ====================== -->
-    <div class="name-overlay">
-      <div class="name-overlay-content">
-        <h2>Name Your Pet</h2>
-        <label for="pet-name-input">Enter your pet's name:</label>
-        <input type="text" id="pet-name-input" placeholder="Type a name...">
-        <button id="start-game-button">Start Game</button>
-      </div>
+  <div class="name-overlay">
+    <div class="name-overlay-content">
+      <h2>Name Your Pet</h2>
+      <label for="pet-name-input">Enter your pet's name:</label>
+      <input type="text" id="pet-name-input" placeholder="Type a name...">
+      <button id="start-game-button">Start Game</button>
     </div>
+  </div>
 
-    <header>
-        <h1 id="pet-title">This is your Giga Pet</h1>
-    </header>
+  <header>
+    <h1 id="pet-title">This is your Giga Pet</h1>
+  </header>
 
-    <main>
-      <!-- PET IMAGE -->
-      <section class="pet-image-container">
-        <img class="pet-image" src="images/wolf.png" alt="Giga Pet">
-        
-        <!-- PET MESSAGE THOUGHT CLOUD -->
-        <div class="pet-message"></div>
-      </section>
+  <main>
+    <!-- PET IMAGE -->
+    <section class="pet-image-container">
+      <img class="pet-image" src="images/wolf.png" alt="Giga Pet">
 
-      <!-- DASHBOARD -->
-      <section class="dashboard">
-        <div>Name: <strong><span class="name"></span></strong></div>
-        <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
-        <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
-        <div>Mood: <strong><span class="mood"></span></strong></div>
+      <!-- PET MESSAGE THOUGHT CLOUD -->
+      <div class="pet-message"></div>
+    </section>
 
-        <!-- ACTION BUTTONS -->
-        <div class="button-container">
-          <button class="treat-button">Treat</button>
-          <button class="play-button">Play</button>
-          <button class="exercise-button">Exercise</button>
-          <button class="cuddle-button">Cuddle</button>
-        </div>
-      </section>
-    </main>
+    <!-- DASHBOARD -->
+    <section class="dashboard">
+      <div>Name: <strong><span class="name"></span></strong></div>
+      <div>Weight: <strong><span class="weight"></span> pounds</strong></div>
+      <div>Happiness: <strong><span class="happiness"></span> tail wags (per min)</strong></div>
+      <div>Mood: <strong><span class="mood"></span></strong></div>
 
-  </body>
+      <!-- ACTION BUTTONS -->
+      <div class="button-container">
+        <button class="treat-button">Treat</button>
+        <button class="play-button">Play</button>
+        <button class="exercise-button">Exercise</button>
+        <button class="cuddle-button">Cuddle</button>
+      </div>
+    </section>
+  </main>
+
+</body>
+
 </html>
-
