@@ -1,6 +1,20 @@
 /* =========================
    GLOBAL STYLES
    ========================= */
+   @font-face {
+       font-family: "DogFont";
+       src: url("fonts/puppy.ttf") format("truetype");
+       font-weight: normal;
+       font-style: normal;
+       font-display: swap;
+   }
+#pet-title {
+    font-family: "DogFont", sans-serif;
+    font-size: 54px;
+    font-weight: 400; /* normal weight */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
 * {
   box-sizing: border-box;
 }

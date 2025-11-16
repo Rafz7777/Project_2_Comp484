@@ -56,10 +56,16 @@ function preventNegativeValues() {
 
 // Update HTML dashboard
 function updatePetInfoInHtml() {
-  $(".name").text(pet_info.name);
+  // Wrap pet name in quotes everywhere
+  const quotedName = `"${pet_info.name}"`;
+  $(".name").text(quotedName);
   $(".weight").text(pet_info.weight);
   $(".happiness").text(pet_info.happiness);
   $(".mood").text(pet_info.mood);
+
+  // Update header and page title dynamically as well
+  $("#pet-title").text(`This is your Giga Pet ${quotedName}`);
+  document.title = `Your Giga Pet ${quotedName}`;
 }
 
 // Combines check and update
@@ -146,25 +152,21 @@ $(function() {
   // Show overlay initially
   $(".name-overlay").show();
 
-    // Start Game button
-    $("#start-game-button").click(function () {
-        const enteredName = $("#pet-name-input").val().trim();
-        if (enteredName === "") {
-            alert("Please enter a name for your pet!");
-            return;
-        }
+  // Start Game button
+  $("#start-game-button").click(function () {
+    const enteredName = $("#pet-name-input").val().trim();
+    if (enteredName === "") {
+      alert("Please enter a name for your pet!");
+      return;
+    }
 
-        pet_info.name = enteredName;
-        checkAndUpdatePetInfoInHtml();
+    // Save name without quotes in object, quotes added in display
+    pet_info.name = enteredName;
+    checkAndUpdatePetInfoInHtml();
 
-        // Update the page title dynamically
-        document.title = `Your Giga Pet ${enteredName}`;
-
-        // Update header text
-        $("#pet-title").text(`This is your Giga Pet ${enteredName}`);
-
-        $(".name-overlay").fadeOut(500);
-    });
+    // Hide overlay
+    $(".name-overlay").fadeOut(500);
+  });
 
   // Button click events
   $(".treat-button").click(clickedTreatButton);
