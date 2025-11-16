@@ -171,7 +171,7 @@ $(function () {
         checkAndUpdatePetInfoInHtml();
 
         // Hide overlay
-        $(".name-overlay").fadeOut(500);
+        $(".name-overlay").fadeOut(1000);
     });
 
     // Button click events
