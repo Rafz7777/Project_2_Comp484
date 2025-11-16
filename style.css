@@ -19,13 +19,34 @@
   box-sizing: border-box;
 }
 
+/* Background image with left-to-right fade */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 94%;
+  background-image: url('images/park.jpg');
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  
+  /* Create a fade effect from left (opaque) to right (transparent) */
+  mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%); /* Safari support */
+
+  z-index: -1; /* behind all content */
+}
+
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 25px;
 }
 
 header {
-  border-bottom: 1px solid black;
+  position: relative;    /* allows shifting without removing from normal flow */
+  left: 225px;            /* move right */
 }
 
 h1 {
@@ -96,12 +117,11 @@ footer a {
   cursor: pointer;
 }
 
-
 /* =========================
    PET IMAGE
    ========================= */
 .pet-image {
-  height: 250px;
+  height: 400px;
 }
 
 .pet-image-container {
@@ -137,7 +157,7 @@ footer a {
     background-size: 140px 140px;     
     background-position: center;
     background-repeat: no-repeat;
-    background-color: white;
+    background-color: transparent;
     border: none;                 
     border-radius: 50%;           
     cursor: pointer;
@@ -163,28 +183,33 @@ footer a {
    ========================= */
 .pet-message {
   position: absolute;
-  top: -1px;          /* adjust to appear above the pet image */
-  left: 33%;
+  top: -3px;
+  left: 70%;
   transform: translateX(-50%);
-  max-width: 180px;
+  display: none;
   padding: 10px 15px;
   font-size: 14px;
   font-weight: bold;
   color: #000;
-  background: #fff;           /* bubble color */
-  border-radius: 20px;        /* rounded for cloud effect */
+  background: #fff;
+  border-radius: 20px;
   box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
   text-align: center;
-  display: none;              /* hidden by default */
-  z-index: 10;                /* appears above image */
+  z-index: 10;
+
+  width: auto;           /* width adapts to text length */
+  max-width: 350px;      /* prevents bubble from being too wide */
+  white-space: nowrap;   /* keep text in one line if possible */
+  overflow-wrap: break-word; /* wrap text if it exceeds max-width */
 }
+
 
 /* Tail of the thought bubble */
 .pet-message::after {
   content: "";
   position: absolute;
   top: 100%;           /* tail starts just below the bubble */
-  left: 86%;           
+  left: 67%;           
   transform: translateX(-50%);
   border-width: 10px;  /* size of the tail */
   border-style: solid;

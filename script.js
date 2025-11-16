@@ -146,7 +146,7 @@ function clickedCuddleButton() {
     playSound("sounds/howl.wav");
 
     if (!checkWeightAlert()) {
-        showPetMessage("Aww... I love cuddles!");
+        showPetMessage("Aww... I love cuddles!!!");
     }
 }
 
