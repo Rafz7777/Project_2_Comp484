@@ -40,7 +40,10 @@ function playSound(soundFile) {
     audio.play();
 }
 
-// Check if weight is half or less of starting weight
+// Check if weight is half or less of starting weight. This is an added feature that
+// will override the mood and happiness of the animal until overall weight is >half its
+// original weight.
+
 function checkWeightAlert() {
     if (pet_info.weight <= startingWeight / 2) {
         pet_info.mood = "HUNGRY!!! 😫"; // override mood
